@@ -323,11 +323,27 @@ void pushZerosToEnd(vector<int>& arr) {
         else high++;
     }
 }
+// int main(){
+//     vector<int> v={1,2,0,0,0,3,4,21,0,100,2,0,0,3};
+//     pushZerosToEnd(v);
+//     for(auto i:v) cout<<i<<" ";
+//     return 0;
+// }
+
+
+//8.linear search
+//TC=O(N),SC=O(1)
+//for first occurence,return index
+int linear_search(vector<int> arr,int x){
+    int n = arr.size();
+    for(int i=0;i<n;i++){
+        if(arr[i]==x) return i;
+    }
+    return -1;
+}
 int main(){
-    vector<int> v={1,2,0,0,0,3,4,21,0,100,2,0,0,3};
-    pushZerosToEnd(v);
-    for(auto i:v) cout<<i<<" ";
+    vector<int> vec={1,10,367,2,387,100,10,7};
+    cout<<linear_search(vec,100);  //5
     return 0;
 }
-
 
